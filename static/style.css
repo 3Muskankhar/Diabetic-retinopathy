@@ -1,0 +1,452 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background: #f9f9f9;
+}
+html {
+    scroll-behavior: smooth;
+}
+* {
+    box-sizing: border-box;
+}
+
+/* Container */
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+header {
+    background: #fff; /* White background */
+    color: #000; /* Black text */
+    padding: 1rem 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #020825cc; /* Black logo text */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #000; /* Black text */
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+    background: #f1f1f1; /* Light gray hover background */
+    color: #007bff; /* Blue text on hover */
+    border-radius: 5px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #fff; /* White background for dropdown */
+    padding: 0.5rem 0;
+    list-style: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 0.5rem 1rem;
+}
+
+.dropdown-menu a {
+    color: #000; /* Black text for dropdown */
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background: #f1f1f1; /* Light gray hover */
+    color: #007bff; /* Blue text on hover */
+}
+
+/* Hero Section */
+.hero {
+    background: url('pic.png') center/cover no-repeat;
+    color: #fff;
+    background-size: center;
+    text-align: center;
+    padding: 7rem 0; /* Increased padding for more height */
+    margin-top: 5rem;
+    margin-bottom: 3rem; /* Prevent hero content from overlapping with fixed navbar */
+    height: 70vh; /* Set the height to cover a larger portion of the screen */
+}
+
+.hero-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 0rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-stretch:ultra-expanded;
+    font-size: 3.875rem;
+    font-style: normal;
+    font-family: Poppins;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: 0px;
+    text-transform: none;
+    margin-bottom: 10px;
+    }
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+    color:#fff;
+}
+
+.btn {
+    background: #28a745;
+    color: #fff;
+
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #218838;
+}
+
+/* About Section */
+.about {
+    padding: 4rem 0;
+    background: #eef2f3; /* Subtle light gray background */
+}
+
+.about-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.about-text p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+    color: #555;
+}
+
+.about-link {
+    color: #28a745;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.about-link:hover {
+    text-decoration: underline;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 3rem;
+}
+
+/* New Section */
+.new-section {
+    padding: 4rem 0;
+    background: #f9f9f9; /* Light background for contrast */
+    text-align: center;
+}
+
+.new-section h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #333;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.new-section-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.new-section-card {
+    background: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    border-radius: 5px;
+    max-width: 300px;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #373a3c;
+    background-color: #fff
+}
+
+.new-section-card img {
+    width: 100%;
+    height: 10rem;
+    border-radius: 10px;
+    margin-bottom: 0rem;
+}
+
+.new-section-card h4 {
+    font-size: 1.25rem;
+    margin-bottom: -.5rem;
+    color: #01060c; /* Blue heading */
+}
+
+.new-section-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.new-section-card .btn {
+    display: inline-block;
+    text-decoration: none;
+    background: #28a745;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.new-section-card .btn:hover {
+    background: #218838;
+}
+/* Contact Section */
+/* General Reset */
+/*  */
+
+
+/* Contact Section */
+.contact-section {
+    padding: 4rem 2rem;
+    background: #f9f9f9;
+}
+
+.contact-section h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #333;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+/* Layout: Two Equal Parts */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: flex-start;
+    padding: 0 3rem;
+}
+
+/* Left Side: Contact Form */
+.contact-left {
+    padding: 2rem;
+}
+
+.contact-left h4 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1rem;
+}
+
+
+.contact-form label {
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    display: block;
+}
+.form__label-required {
+    color: red;
+    margin-left: 0rem; /* Small space between text and asterisk */
+    font-weight: bold; /* Make asterisk less bold */
+}
+.form__label-required {
+    color: red;            /* Asterisk in red color */
+    font-weight: bold;     /* Bold styling for emphasis */
+    margin-left: 0rem;  /* Add space between the label text and the asterisk */
+    font-size: 1.2rem;     /* Adjust size slightly larger for visibility */
+    vertical-align: middle; /* Align the asterisk vertically with the label */
+  }
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+}
+
+.contact-form .submit-btn {
+    display: inline-block;
+    background: #28a745;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: max-content;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    
+}
+.contact-form .submit-btn {
+    width: 100%;
+     /* Matches the content box width */
+}
+
+
+.contact-form .submit-btn:hover {
+    background: #218838;
+    /* width:max-content */
+}
+
+/* Right Side: Contact Info Box */
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 2rem;
+}
+
+.contact-info .info-box {
+    width: 100%;
+    padding: 2rem;
+    background: #e9ecef; 
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+.contact-info i {
+    color: #333;
+    margin-right: 0.5rem;
+}
+
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+}
+
+
+

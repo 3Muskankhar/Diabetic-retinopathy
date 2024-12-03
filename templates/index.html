@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetic Retinopathy Detection</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container header">
+            <div class="brand">
+                <h1>DIABETIC RETINOPATHY DETECTION</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li class="dropdown">
+                        <a href="#">More</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#diabetic-retinopathy">Services</a></li>
+                            <li><a href="blog.html">Blog Feed</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contact" class="contact-btn">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Diabetic Retinopathy Detection</h2>
+                <p>Early Detection and Segmentation of Diabetic Retinopathy</p>
+                <a href="#diabetic-retinopathy" class="btn">VIEW SERVICES</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container about-layout">
+            <div class="about-text">
+                <h3>Empowering Detection and Awareness</h3>
+                <p>
+                    Diabetic Retinopathy Detection is revolutionizing the way healthcare professionals in Chandigarh, IN, manage diabetic retinopathy. Our innovative platform allows doctors and medical experts to effortlessly upload images related to diabetic retinopathy. Using a cutting-edge U-Net model, we provide a segmented version of these images, enhancing diagnostic accuracy. Additionally, we are committed to educating patients and professionals alike about the symptoms, risks, and preventative measures for diabetic retinopathy, ensuring better eye health for all.
+                </p>
+                <a href="#contact" class="about-link">Get in touch</a>
+            </div>
+            <div class="about-image">
+                <img src="../static/eye.png" alt="Eye Image">
+            </div>
+        </div>
+    </section>
+
+    <!-- New Section for Image Upload -->
+    <section id="diabetic-retinopathy" class="new-section">
+        <div class="container">
+            <h3>Revolutionizing Diabetic Retinopathy Detection</h3>
+            <div class="new-section-content">
+                <div class="new-section-card">
+                    <img src="../static/upload.png" alt="Image Upload for Analysis">
+                    <h4>Image Upload for Diabetic Retinopathy</h4>
+                    <p>Easily upload images for diabetic retinopathy analysis.</p>
+                    <a href="#image-upload" class="btn">Upload Images</a>
+                </div>
+                <div class="new-section-card">
+                    <img src="../static/img.png" alt="Educational Resources">
+                    <h4>Educational Resources on Diabetic Retinopathy</h4>
+                    <p>Access valuable information on diabetic retinopathy.</p>
+                    <a href="newpage.html" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Upload Section -->
+    <section id="image-upload">
+        <div class="container">
+            <h3>Upload Image for Segmentation</h3>
+            <!-- Form for Image Upload -->
+            <form id="upload-form" action="/upload" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" accept="image/*" required>
+                <button type="submit">Upload Image</button>
+            </form>
+
+            <div id="mask-container" style="display:none;">
+                <h4>Segmentation Mask</h4>
+                <img id="segmentation-mask" src="" alt="Segmentation Mask" style="max-width: 100%; height: auto;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h3>Contact Us For Support And information</h3>
+            <div class="contact-layout">
+                <!-- Left Side: Contact Form -->
+                <div class="contact-left">
+                    <form class="contact-form" action="https://formspree.io/f/mjkvjree" method="POST" id="form">
+                        <div class="form-group">
+                            <label for="name">Name <span class="form__label-required">*</span></label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>                           
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number <span class="form__label-required">*</span></label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address <span class="form__label-required">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Write your message"></textarea>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="terms" name="terms">
+                            <label for="terms" class="form__label">
+                                I allow this website to store my submission so they can respond to my inquiry.
+                                <span class="form__label-required" title="This field is required">*</span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="submit-btn">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Right Side: Contact Details -->
+                <div class="contact-info">
+                    <div class="info-box">
+                        <h4>Get in Touch</h4>
+                        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:doctor@gmail.com">doctorname@gmail.com</a></p>
+                        <p><i class="fas fa-map-marker-alt"></i> Location: Chandigarh, CH IN</p>
+                        
+                        <h4>Hours</h4>
+                        <ul>
+                            <li>Monday - Friday: 9:00am - 10:00pm</li>
+                            <li>Saturday: 9:00am - 6:00pm</li>
+                            <li>Sunday: 9:00am - 12:00pm</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Diabetic Retinopathy Detection. All rights reserved.</p>
+    </footer>
+
+    <!-- JS to handle form submission and dynamic image display -->
+    <script>
+        const form = document.getElementById('upload-form');
+        const maskContainer = document.getElementById('mask-container');
+        const maskImage = document.getElementById('segmentation-mask');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(form);
+
+            fetch('/upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.blob())
+            .then(blob => {
+                const url = URL.createObjectURL(blob);
+                maskImage.src = url;  // Set the source to the mask image URL
+                maskContainer.style.display = 'block';  // Show the mask section
+            })
+            .catch(error => console.error('Error uploading image:', error));
+        });
+    </script>
+</body>
+</html>
